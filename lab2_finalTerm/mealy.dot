@@ -1,0 +1,15 @@
+digraph Mealy {
+rankdir=LR;
+node [shape=circle];
+// start: A
+  "A" -> "A" [label="0/A"];
+  "A" -> "B" [label="1/B"];
+  "B" -> "C" [label="0/A"];
+  "B" -> "D" [label="1/B"];
+  "C" -> "D" [label="0/C"];
+  "C" -> "B" [label="1/B"];
+  "D" -> "B" [label="0/B"];
+  "D" -> "C" [label="1/C"];
+  "E" -> "D" [label="0/C"];
+  "E" -> "E" [label="1/C"];
+}

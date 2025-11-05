@@ -1,0 +1,26 @@
+digraph Moore {
+rankdir=LR;
+node [shape=circle];
+  "D/C" [label="D/C"];
+  "C/A" [label="C/A"];
+  "B/B" [label="B/B"];
+  "D/B" [label="D/B"];
+  "C/C" [label="C/C"];
+  "E/C" [label="E/C"];
+  "A/A" [label="A/A"];
+// start: A/A
+  "D/C" -> "B/B" [label="0"];
+  "D/C" -> "C/C" [label="1"];
+  "C/A" -> "D/C" [label="0"];
+  "C/A" -> "B/B" [label="1"];
+  "B/B" -> "C/A" [label="0"];
+  "B/B" -> "D/B" [label="1"];
+  "D/B" -> "B/B" [label="0"];
+  "D/B" -> "C/C" [label="1"];
+  "C/C" -> "D/C" [label="0"];
+  "C/C" -> "B/B" [label="1"];
+  "E/C" -> "D/C" [label="0"];
+  "E/C" -> "E/C" [label="1"];
+  "A/A" -> "A/A" [label="0"];
+  "A/A" -> "B/B" [label="1"];
+}
